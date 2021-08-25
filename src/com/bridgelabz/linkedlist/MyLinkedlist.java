@@ -59,6 +59,29 @@ public class MyLinkedlist<T> {
 
     }
 
+    /**
+     * UC3 Ability to create linkedlist by appending 30 and 70 to 56.
+     *
+     * @author prem
+     * @version 12.3
+     * @since 25/08/2021
+     */
+
+    public void insertAtTail(T data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            insertAtHead(data);
+            return;
+        }
+
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        tail = newNode;
+    }
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
