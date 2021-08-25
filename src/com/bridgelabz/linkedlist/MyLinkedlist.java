@@ -168,7 +168,6 @@ public class MyLinkedlist<T> {
         return false;
     }
 
-
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
