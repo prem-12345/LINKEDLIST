@@ -111,6 +111,23 @@ public class MyLinkedlist<T> {
         newNode.next = nxt;
     }
 
+    /**
+     * UC5 Ability to delete first element in the linkedlist .
+     *
+     * @author prem
+     * @version 12.5
+     * @since 25/08/2021
+     */
+
+    public Node pop() {
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return head;
+        }
+        Node newHead = head.next;
+        return newHead;
+    }
+
 
     public void display(Node head) {
         if (isEmpty()) {
