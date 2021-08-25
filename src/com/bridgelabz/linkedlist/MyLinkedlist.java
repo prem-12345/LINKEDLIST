@@ -12,7 +12,7 @@ class Node<T> {
     }
 }
 
-public class MyLinkedlist<T extends Comparable<T>> {
+public class MyLinkedlist<T> {
 
     /**
      * UC1 Create a simple linkedlist of 56,30 and 70.
