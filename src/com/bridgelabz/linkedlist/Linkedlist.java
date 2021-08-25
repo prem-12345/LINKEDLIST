@@ -27,5 +27,7 @@ public class Linkedlist {
         singleLinkedlist.insertAtMid(3,40);
         singleLinkedlist.display(singleLinkedlist.head);
 
+        singleLinkedlist.size();
     }
+
 }

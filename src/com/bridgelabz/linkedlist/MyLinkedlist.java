@@ -1,5 +1,7 @@
 package com.bridgelabz.linkedlist;
 
+import java.util.*;
+
 class Node<T> {
     T data;
     Node next;
@@ -10,7 +12,7 @@ class Node<T> {
     }
 }
 
-public class MyLinkedlist<T> {
+public class MyLinkedlist<T extends Comparable<T>> {
 
     /**
      * UC1 Create a simple linkedlist of 56,30 and 70.
@@ -139,7 +141,7 @@ public class MyLinkedlist<T> {
     public void popLast() {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
-            return ;
+            return;
         }
 
         Node temp = head;
@@ -168,6 +170,28 @@ public class MyLinkedlist<T> {
         return false;
     }
 
+    /**
+     * UC9 Ability to show size of the linkedlist.
+     *
+     * @author prem
+     * @version 12.9
+     * @since 25/08/2021
+     */
+
+    public void size() {
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return;
+        }
+        int count = 0;
+        Node temp = head;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        System.out.println("Length Of Linkedlist: " + count);
+    }
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -181,7 +205,6 @@ public class MyLinkedlist<T> {
         }
         System.out.println("Null");
     }
-
 
 }
 
