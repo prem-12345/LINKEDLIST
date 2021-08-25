@@ -12,5 +12,11 @@ public class Linkedlist {
          * @since 25/08/2021
          */
 
+        MyLinkedlist singleLinkedlist = new MyLinkedlist();
+        singleLinkedlist.add(56);
+        singleLinkedlist.add(30);
+        singleLinkedlist.add(70);
+        singleLinkedlist.display(singleLinkedlist.head);
+
     }
 }
