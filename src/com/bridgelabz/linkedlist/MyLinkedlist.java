@@ -149,6 +149,25 @@ public class MyLinkedlist<T> {
         temp.next = null;
     }
 
+    /**
+     * UC7 Ability to serch linkedlist to find node with value 30.
+     *
+     * @author prem
+     * @version 12.7
+     * @since 25/08/2021
+     */
+
+    public boolean searchKey(T key) {
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == key) {
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+
 
     public void display(Node head) {
         if (isEmpty()) {
