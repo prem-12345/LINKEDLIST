@@ -2,17 +2,17 @@ package com.bridgelabz.linkedlist;
 
 import java.util.*;
 
-class Node<T> {
-    T data;
+class Node {
+    int data;
     Node next;
 
-    public Node(T data) {
+    public Node(int data) {
         this.data = data;
         this.next = null;
     }
 }
 
-public class MyLinkedlist<T> {
+public class MyLinkedlist {
 
     /**
      * UC1 Create a simple linkedlist of 56,30 and 70.
@@ -25,7 +25,7 @@ public class MyLinkedlist<T> {
     Node head = null;
     Node tail;
 
-    public void add(T data) {
+    public void add(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
@@ -54,7 +54,7 @@ public class MyLinkedlist<T> {
      * @since 25/08/2021
      */
 
-    public void insertAtHead(T data) {
+    public void insertAtHead(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
@@ -69,7 +69,7 @@ public class MyLinkedlist<T> {
      * @since 25/08/2021
      */
 
-    public void insertAtTail(T data) {
+    public void insertAtTail(int data) {
         Node newNode = new Node(data);
         if (head == null) {
             insertAtHead(data);
@@ -92,7 +92,7 @@ public class MyLinkedlist<T> {
      * @since 25/08/2021
      */
 
-    public void insertAtMid(int position, T data) {
+    public void insertAtMid(int position, int data) {
         Node newNode = new Node(data);
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
@@ -159,7 +159,7 @@ public class MyLinkedlist<T> {
      * @since 25/08/2021
      */
 
-    public boolean searchKey(T key) {
+    public boolean searchKey(int key) {
         Node temp = head;
         while (temp != null) {
             if (temp.data == key) {
@@ -206,5 +206,35 @@ public class MyLinkedlist<T> {
         System.out.println("Null");
     }
 
+    /**
+     * UC10 Ability to create ordered linkedlist (ascending).
+     *
+     * @author prem
+     * @version 12.10
+     * @since 25/08/2021
+     */
+
+    public void sort() {
+        Node current = head;
+        Node nxt;
+
+        while (current != null) {
+            nxt = current.next;
+
+            while (nxt != null) {
+
+                if (current.data >= nxt.data) {
+
+                    int temp = current.data;
+                    current.data = nxt.data;
+                    nxt.data = temp;
+
+                }
+                nxt = nxt.next;
+            }
+            current = current.next;
+        }
+
+    }
 }
 
