@@ -16,9 +16,8 @@ public class Linkedlist {
         singleLinkedlist.add(56);
         singleLinkedlist.add(30);
         singleLinkedlist.add(70);
-
-        Node newHead = singleLinkedlist.pop();
-        singleLinkedlist.display(newHead);
+        singleLinkedlist.popLast();
+        singleLinkedlist.display(singleLinkedlist.head);
 
     }
 }

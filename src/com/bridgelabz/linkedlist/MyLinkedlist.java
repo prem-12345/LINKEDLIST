@@ -128,6 +128,27 @@ public class MyLinkedlist<T> {
         return newHead;
     }
 
+    /**
+     * UC6 Ability to delete last element in the linkedlist .
+     *
+     * @author prem
+     * @version 12.6
+     * @since 25/08/2021
+     */
+
+    public void popLast() {
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return ;
+        }
+
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+
 
     public void display(Node head) {
         if (isEmpty()) {
