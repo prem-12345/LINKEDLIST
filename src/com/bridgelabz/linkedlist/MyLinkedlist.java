@@ -82,6 +82,36 @@ public class MyLinkedlist<T> {
         tail = newNode;
     }
 
+    /**
+     * UC4 Ability to insert 30 between 56 and 70.
+     *
+     * @author prem
+     * @version 12.4
+     * @since 25/08/2021
+     */
+
+    public void insertAtMid(int position, T data) {
+        Node newNode = new Node(data);
+        if (isEmpty()) {
+            System.out.println("Empty Linkedlist");
+            return;
+        }
+
+        Node temp = head;
+        int idx = 1;
+        while (temp.next != null) {
+            if (idx == position - 1) {
+                break;
+            }
+            idx++;
+            temp = temp.next;
+        }
+        Node nxt = temp.next;
+        temp.next = newNode;
+        newNode.next = nxt;
+    }
+
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
