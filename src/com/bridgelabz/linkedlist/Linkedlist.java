@@ -13,9 +13,9 @@ public class Linkedlist {
          */
 
         MyLinkedlist singleLinkedlist = new MyLinkedlist();
-        singleLinkedlist.add(56);
-        singleLinkedlist.add(30);
-        singleLinkedlist.add(70);
+        singleLinkedlist.insertAtHead(70);
+        singleLinkedlist.insertAtHead(30);
+        singleLinkedlist.insertAtHead(56);
         singleLinkedlist.display(singleLinkedlist.head);
 
     }

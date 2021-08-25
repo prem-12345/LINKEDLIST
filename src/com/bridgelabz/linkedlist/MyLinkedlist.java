@@ -44,6 +44,21 @@ public class MyLinkedlist<T> {
         return false;
     }
 
+    /**
+     * UC2 Ability to create linkedlist by adding 30 and 56 to 70.
+     *
+     * @author prem
+     * @version 12.2
+     * @since 25/08/2021
+     */
+
+    public void insertAtHead(T data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+
+    }
+
     public void display(Node head) {
         if (isEmpty()) {
             System.out.println("Empty Linkedlist");
